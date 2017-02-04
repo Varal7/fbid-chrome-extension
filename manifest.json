@@ -1,16 +1,22 @@
 {
     "manifest_version": 2,
 
-    "name": "Fb id",
+    "name": "Facebook ID",
     "description": "Display Facebook Id of current page",
-    "version": "0.1",
+    "version": "1.0",
+
+  "content_scripts": [
+    {
+      "matches": ["https://www.facebook.com/*"],
+      "js": ["jquery.js", "content.js"]
+    }
+  ],
 
     "browser_action": {
         "default_icon": "book.png",
         "default_popup": "popup.html"
     },
     "permissions": [
-        "activeTab",
-        "https://api.fbid.varal7.fr/"
+        "activeTab"
     ]
 }
